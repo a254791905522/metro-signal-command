@@ -1,0 +1,132 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Metro Signal Command</title>
+  <meta name="description" content="Offline metro train dispatch puzzle across 50 world cities. Accelerate, brake, dodge speed limits, resolve faults.">
+  <style>
+    :root { --bg: #0a0e1a; --card: #121829; --text: #e6ecf5; --muted: #8a93a6; --accent: #ffd700; --accent2: #ff5252; --line: rgba(255,255,255,.10); }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; background: var(--bg); color: var(--text); line-height: 1.65; }
+    main { max-width: 1120px; margin: 0 auto; padding: 0 20px; }
+    section { padding: 56px 0; border-top: 1px solid var(--line); }
+    .hero { text-align: center; padding: 72px 0 56px; border: none; }
+    .badge { display: inline-block; background: rgba(255,215,0,.12); color: var(--accent); font-size: 12px; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; padding: 6px 14px; border-radius: 999px; border: 1px solid rgba(255,215,0,.3); }
+    h1 { font-size: 44px; margin: 18px 0 10px; letter-spacing: -.02em; }
+    .subtitle { color: var(--accent); font-size: 19px; font-weight: 600; margin-bottom: 14px; }
+    .intro { color: var(--muted); max-width: 640px; margin: 0 auto; font-size: 16px; }
+    h2 { font-size: 28px; margin-bottom: 22px; }
+    .grid { display: grid; gap: 18px; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); }
+    .shot-card { background: var(--card); border: 1px solid var(--line); border-radius: 14px; overflow: hidden; }
+    .shot-card img { width: 100%; display: block; }
+    .shot-card h3 { padding: 12px 14px 4px; font-size: 15px; }
+    .shot-card p { padding: 0 14px 14px; color: var(--muted); font-size: 13px; }
+    .card { background: var(--card); border: 1px solid var(--line); border-radius: 14px; padding: 24px; }
+    .card p { margin: 10px 0; color: var(--text); }
+    .features { display: grid; gap: 14px; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); }
+    .feat { background: var(--card); border: 1px solid var(--line); border-radius: 12px; padding: 18px 20px; }
+    .feat .num { color: var(--accent); font-weight: 700; font-size: 13px; }
+    .feat h3 { font-size: 16px; margin: 6px 0; }
+    .feat p { color: var(--muted); font-size: 14px; }
+    .feature-grid { display: grid; gap: 14px; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); }
+    .info { display: grid; gap: 12px 28px; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); }
+    .info > div { background: var(--card); border: 1px solid var(--line); border-radius: 10px; padding: 14px 16px; }
+    .info .label { color: var(--muted); font-size: 12px; text-transform: uppercase; letter-spacing: .08em; }
+    .info .value { color: var(--text); font-size: 15px; font-weight: 600; margin-top: 4px; }
+    footer { border-top: 1px solid var(--line); padding: 28px 0; text-align: center; color: var(--muted); font-size: 13px; }
+    footer a { color: var(--accent); }
+    @media (max-width: 600px) { h1 { font-size: 34px; } }
+  </style>
+</head>
+<body>
+  <main>
+    <header class="hero">
+      <div class="badge">Puzzle / Simulation</div>
+      <h1>Metro Signal Command</h1>
+      <p class="subtitle">Dispatch the midnight metro across 50 world cities</p>
+      <p class="intro">You are the night-shift dispatcher. Accelerate, brake, dodge speed limits, and resolve faults across 1372 real stations. Fully offline. No ads. No IAP.</p>
+    </header>
+
+    <section class="screens">
+      <h2>Screenshots</h2>
+      <div class="grid">
+        <div class="shot-card">
+          <img src="screenshots_65/01_main_menu.png" alt="Metro Signal Command main menu">
+          <h3>Main Menu</h3>
+          <p>Start your shift, browse levels, or adjust settings.</p>
+        </div>
+        <div class="shot-card">
+          <img src="screenshots_65/02_level_select.png" alt="Level select across 50 cities">
+          <h3>50 World Cities</h3>
+          <p>London, Paris, Tokyo, NYC, Sydney and more.</p>
+        </div>
+        <div class="shot-card">
+          <img src="screenshots_65/03_dispatch.png" alt="Dispatching multiple trains">
+          <h3>Multi-Train Dispatch</h3>
+          <p>Control 1-4 trains with staggered departure times.</p>
+        </div>
+        <div class="shot-card">
+          <img src="screenshots_65/04_fault_response.png" alt="Responding to signal fault">
+          <h3>Fault Response</h3>
+          <p>Resolve signal, door, and crowd faults fast.</p>
+        </div>
+        <div class="shot-card">
+          <img src="screenshots_65/05_level_complete.png" alt="Level complete with star rating">
+          <h3>Star Rating</h3>
+          <p>Earn up to 3 stars across punctuality, faults, and satisfaction.</p>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2>About Metro Signal Command</h2>
+      <div class="card">
+        <p>Metro Signal Command is an offline metro train dispatch puzzle built with SpriteKit. You play the night-shift OCC dispatcher for 50 real-world metro lines, keeping trains on time through 60-second shifts while managing speed limits, train spacing, and sudden faults.</p>
+        <p>Progress scales from a single train in Europe (L1-L10) to four coordinated trains across South America and Oceania (L41-L50). Each level is a real metro line with real station names.</p>
+        <p>Scoring blends punctuality (40%), fault response (30%), passenger satisfaction (30%), and a combo bonus. Reach 80 for three stars.</p>
+      </div>
+    </section>
+
+    <section>
+      <h2>How to Play</h2>
+      <div class="features">
+        <div class="feat"><div class="num">01</div><h3>Select a train</h3><p>Tap any train to select it. The first train is auto-selected at level start.</p></div>
+        <div class="feat"><div class="num">02</div><h3>Accelerate and brake</h3><p>Tap the green + button to speed up (+0.05 per tap, up to 2x). Tap the red brake to slow down.</p></div>
+        <div class="feat"><div class="num">03</div><h3>Respect speed limits</h3><p>Yellow zones warn, red zones enforce. Safe passage builds a combo; speeding costs 8 points.</p></div>
+        <div class="feat"><div class="num">04</div><h3>Keep your distance</h3><p>Trains too close auto-brake and lose 10 points. Stagger departures to avoid collisions.</p></div>
+        <div class="feat"><div class="num">05</div><h3>Resolve faults</h3><p>Signal caps speed, door adds dwell, crowd adds delay. Tap Resolve Fault quickly for max score.</p></div>
+        <div class="feat"><div class="num">06</div><h3>Survive 60 seconds</h3><p>Reach 80 for 3 stars, 60 for 2 stars, 40 for 1 star. Clear the level to unlock the next city.</p></div>
+      </div>
+    </section>
+
+    <section>
+      <h2>Support</h2>
+      <div class="feature-grid">
+        <div class="card"><h3>How do I play?</h3><p>Tap a train to select it, then use the green + and red brake buttons. The first train is auto-selected when a level starts.</p></div>
+        <div class="card"><h3>Does it need internet?</h3><p>No. Metro Signal Command is fully offline. No accounts, no ads, no in-app purchases, no analytics.</p></div>
+        <div class="card"><h3>Need help?</h3><p>Contact support through the Metro Signal Command App Store product page.</p></div>
+      </div>
+    </section>
+
+    <section>
+      <h2>App Information</h2>
+      <div class="info">
+        <div><div class="label">Genre</div><div class="value">Games / Puzzle</div></div>
+        <div><div class="label">Compatibility</div><div class="value">iOS 15.0 or later</div></div>
+        <div><div class="label">Device Support</div><div class="value">iPhone only</div></div>
+        <div><div class="label">Age Rating</div><div class="value">4+</div></div>
+        <div><div class="label">Version</div><div class="value">1.0</div></div>
+        <div><div class="label">Language</div><div class="value">English</div></div>
+        <div><div class="label">Privacy</div><div class="value">No data collected</div></div>
+        <div><div class="label">Bundle ID</div><div class="value">com.rosewood.driftsubway.game</div></div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div>&copy; 2026 Metro Signal Command. All rights reserved.</div>
+    <div style="margin-top:8px;"><a href="/privacy.html">Privacy Policy</a></div>
+  </footer>
+</body>
+</html>
